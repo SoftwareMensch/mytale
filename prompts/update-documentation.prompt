@@ -1,0 +1,174 @@
+# Documentation Update Prompt
+
+You are tasked with updating the Hytale server decompiled code documentation to ensure it accurately reflects:
+1. The current state of the decompiled codebase
+2. Official Hytale documentation and announcements
+3. Consistency across all documentation files
+
+## Objectives
+
+- Verify documentation accuracy against decompiled source code
+- Check for updates in official Hytale documentation
+- Ensure consistency between README.md and docs/*.md files
+- Identify missing or outdated information
+- Update code examples and API references
+
+## Process
+
+### Step 1: Check Official Documentation
+1. Search for the latest official Hytale modding documentation:
+   - Check https://hytale.com/news for recent announcements
+   - Look for official modding guides, API documentation, or strategy updates
+   - Pay special attention to:
+     - Modding strategy changes
+     - API deprecations or additions
+     - Tooling updates
+     - Architecture announcements
+
+2. Compare official documentation with what's documented in README.md:
+   - Verify the "Official Modding Strategy and Status" section is current
+   - Check if new official documentation should be added
+   - Note any discrepancies between official docs and our decompiled analysis
+
+### Step 2: Analyze Decompiled Code Structure
+1. Explore the decompiled codebase systematically:
+   - Review package structure under `decompiled/com/hypixel/hytale/`
+   - Identify new packages, classes, or modules not yet documented
+   - Note significant architectural patterns or systems
+   - Check for changes in core systems (ECS, plugins, networking, etc.)
+
+2. Key areas to examine:
+   - `decompiled/com/hypixel/hytale/component/` - ECS implementation
+   - `decompiled/com/hypixel/hytale/server/core/plugin/` - Plugin system
+   - `decompiled/com/hypixel/hytale/server/core/io/` - Network layer
+   - `decompiled/com/hypixel/hytale/registry/` - Registry patterns
+   - `decompiled/com/hypixel/hytale/event/` - Event system
+   - Any other significant packages
+
+### Step 3: Verify README.md Accuracy
+1. Check README.md sections against decompiled code:
+   - **Server Version**: Verify SHA256 checksum matches current decompiled code
+   - **Documentation Links**: Ensure all referenced docs exist and are accurate
+   - **Project Structure**: Verify directory structure matches actual layout
+   - **Key Discoveries**: Confirm architectural highlights are still accurate
+   - **Technology Stack**: Verify listed technologies match actual dependencies
+   - **Related Files**: Check that file paths are correct
+
+2. Verify the "Official Modding Strategy and Status" section:
+   - Ensure it reflects the latest official documentation
+   - Update dates, priorities, and status information as needed
+   - Add any new official announcements or changes
+
+### Step 4: Verify docs/ARCHITECTURE.md
+1. Cross-reference with decompiled code:
+   - **Core Architecture Patterns**: Verify patterns match actual implementation
+   - **ECS Architecture**: Compare with `component/` package structure
+   - **Plugin System**: Verify against `server/core/plugin/` implementation
+   - **Module System**: Check module structure and organization
+   - **Registry Pattern**: Verify registry implementations
+   - **Event-Driven Architecture**: Check event system implementation
+   - **Network Architecture**: Verify network layer structure
+   - **Serialization System**: Check codec/serialization implementations
+   - **Resource Management**: Verify resource loading patterns
+   - **Spatial Data Structures**: Check spatial optimization implementations
+   - **Command System**: Verify command handling
+   - **Dependency Management**: Check dependency injection patterns
+   - **Performance Optimizations**: Verify optimization techniques mentioned
+
+2. Update code examples:
+   - Ensure all code examples reflect actual decompiled code
+   - Add new examples for undocumented patterns
+   - Remove or update outdated examples
+
+### Step 5: Verify docs/ECS.md
+1. Compare ECS documentation with actual implementation:
+   - **Core Concepts**: Verify Component, Entity, System definitions match code
+   - **Archetypes and ArchetypeChunk**: Check implementation details
+   - **Store Management**: Verify storage patterns
+   - **Query System**: Check query implementation
+   - **System Execution**: Verify execution patterns
+   - **Command Buffers**: Check command buffer implementation
+   - **Performance Optimizations**: Verify optimization techniques
+
+2. Review code examples:
+   - Ensure examples match actual decompiled code structure
+   - Update class names, method signatures, and patterns
+   - Add examples for newly discovered patterns
+
+### Step 6: Verify docs/PLUGINS.md
+1. Cross-reference plugin documentation with decompiled code:
+   - **Plugin Structure**: Verify plugin class structure and lifecycle
+   - **Available Registries**: Check all registry types and their APIs
+   - **Command System**: Verify command registration and handling
+   - **Event System**: Check event types and handling
+   - **Entity System**: Verify entity manipulation APIs
+   - **Asset System**: Check asset loading and management
+   - **Codec System**: Verify codec registration and usage
+   - **Usage Patterns**: Ensure examples match actual API
+
+2. Update API references:
+   - Verify all class names, method signatures, and package paths
+   - Add newly discovered APIs
+   - Mark deprecated or removed APIs if found
+
+### Step 7: Consistency Check
+1. Ensure consistency across all documentation:
+   - Verify terminology is consistent (e.g., "plugin" vs "mod")
+   - Check that architectural concepts are described consistently
+   - Ensure code examples use consistent style
+   - Verify cross-references between documents are accurate
+
+2. Check for contradictions:
+   - Resolve any conflicting information between docs
+   - Ensure version numbers and dates are consistent
+   - Verify file paths and references are correct
+
+### Step 8: Identify Missing Documentation
+1. Look for undocumented areas:
+   - New packages or modules not covered
+   - Important classes or systems without documentation
+   - Missing API documentation
+   - Undocumented architectural patterns
+
+2. Prioritize documentation gaps:
+   - Core systems should be fully documented
+   - Public APIs should have complete documentation
+   - Important patterns should be explained
+
+### Step 9: Update Documentation
+1. Make necessary updates:
+   - Update outdated information
+   - Add missing documentation
+   - Fix inconsistencies
+   - Correct errors
+   - Improve clarity where needed
+
+2. Maintain documentation quality:
+   - Keep code examples accurate and up-to-date
+   - Ensure explanations are clear and comprehensive
+   - Maintain consistent formatting and style
+   - Preserve existing good documentation
+
+### Step 10: Verification
+1. Final checks:
+   - Verify all file paths exist
+   - Check all code examples compile (if applicable)
+   - Ensure all links work
+   - Verify formatting is correct
+   - Check for typos and grammar errors
+
+## Output
+
+After completing the update process, provide:
+1. **Summary of Changes**: List all updates made to documentation
+2. **New Discoveries**: Document any new patterns, APIs, or systems found
+3. **Outdated Information**: Note any information that couldn't be verified or was removed
+4. **Recommendations**: Suggest areas that might need more detailed documentation
+
+## Notes
+
+- Always verify information against actual decompiled code before updating documentation
+- When in doubt, prefer accuracy over completeness - it's better to document less accurately than to document incorrectly
+- Maintain the existing documentation style and structure
+- Preserve useful examples and explanations that are still accurate
+- If official documentation conflicts with decompiled code analysis, note the discrepancy
