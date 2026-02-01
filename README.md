@@ -2,7 +2,7 @@
 
 ## 📦 Server Version
 
-**HytaleServer.jar SHA256:** `1953eceac1e7e610eab343870c280bd5e816d06732a3509714a178d0a6975cda`
+**HytaleServer.jar SHA256:** `bac376d8b6ff608443d76925f855825749f020bd3f74b7bbf6c8bde6a8fbc45e`
 
 This documentation is based on the decompiled source code from the server jar file with the checksum above. All architectural analysis, API documentation, and code examples reflect this specific version of the Hytale server.
 

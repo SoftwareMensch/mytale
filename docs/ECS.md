@@ -75,7 +75,7 @@ public interface QuerySystem<ECS_TYPE> extends ISystem<ECS_TYPE> {
 
 #### **ArchetypeTickingSystem** - Processes matching archetypes
 ```java
-public abstract class ArchetypeTickingSystem<ECS_TYPE> {
+public abstract class ArchetypeTickingSystem<ECS_TYPE> extends TickingSystem<ECS_TYPE> implements QuerySystem<ECS_TYPE> {
     // Called once per matching archetype chunk
     public abstract void tick(float dt, ArchetypeChunk<ECS_TYPE> chunk, 
                              Store<ECS_TYPE> store, CommandBuffer<ECS_TYPE> buffer);
@@ -84,7 +84,7 @@ public abstract class ArchetypeTickingSystem<ECS_TYPE> {
 
 #### **EntityTickingSystem** - Processes individual entities
 ```java
-public abstract class EntityTickingSystem<ECS_TYPE> {
+public abstract class EntityTickingSystem<ECS_TYPE> extends ArchetypeTickingSystem<ECS_TYPE> {
     // Called for each entity matching the query
     public abstract void tick(float dt, int index, ArchetypeChunk<ECS_TYPE> chunk, ...);
 }

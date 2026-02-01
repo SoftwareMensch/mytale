@@ -185,10 +185,25 @@ The server is organized into functional modules:
 
 - **EntityModule** - Entity registration and management
 - **ItemModule** - Item system
-- **BlockModule** - Block system  
-- **WorldModule** - World/chunk management
-- **ConsoleModule** - Console functionality
-- **CosmeticsModule** - Player cosmetics
+- **BlockModule** - Block system
+- **InteractionModule** - Interaction system
+- **BlockHealthModule** - Block health system
+- **BlockSetModule** - Block set management
+- **CameraModule** - Camera system
+- **CollisionModule** - Collision detection
+- **DebugModule** - Debug functionality
+- **EntityStatsModule** - Entity statistics
+- **EntityUIModule** - Entity UI system
+- **I18nModule** - Internationalization
+- **PhysicsModule** - Physics system
+- **PrefabSpawnerModule** - Prefab spawning
+- **ProjectileModule** - Projectile system
+- **ServerPlayerListModule** - Server player list
+- **SingleplayerModule** - Singleplayer functionality
+- **SplitVelocityModule** - Velocity splitting
+- **TimeModule** - Time management
+- **AccessControlModule** - Access control
+- **MigrationModule** - Data migrations
 
 ### Module Structure
 
